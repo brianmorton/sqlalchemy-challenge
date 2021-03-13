@@ -1,7 +1,7 @@
 import datetime as dt
 import numpy as np
 import pandas as pd
-
+import json
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -34,3 +34,30 @@ def welcome():
     )
 
 ##test comment
+@app.route("/api/v1.0/precipitation<br/>")
+def precipitation():
+    results = session.query(Measurement.date, Measurement.prcp)
+
+
+    return jsonify
+
+@app.route("/api/v1.0/stations<br/>")
+def stations():
+querystations = session.query(station.station)
+   
+    return jsonify
+
+@app.route("/api/v1.0/tobs<br/>")
+def tobs():
+   
+
+   return jsonify
+    
+
+
+@app.route("/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`"")
+def search():
+
+
+    return jsonify
+    
